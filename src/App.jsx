@@ -1,18 +1,15 @@
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
-function App() {
-  const items = ['Item 1', 'Item 2', 'Item 3'];
-
-  return (
-    <div>
-      <h1>Simple List with Vite and React</h1>
-      <ul>
-        {items.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default App
+   function App() {
+     return (
+       <div>
+         <Routes>
+           <Route path="/" element={<HomePage />} />
+           <Route path="/about" element={<AboutPage />} />
+         </Routes>
+       </div>
+     );
+   }
+   export default App;
